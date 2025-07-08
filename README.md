@@ -1,37 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 3DGraphTour Project Documentation
 
-## Getting Started
+## 1. Project Inspiration
 
-First, run the development server:
+The idea for **3DGraphTour** emerged from a desire to transform traditional campus tours into an immersive, interactive experience:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Engagement Gap:** Standard web-based maps often feel static and fail to capture the spatial logic of large campuses.
+- **Accessibility:** Prospective students can’t always visit in person, so we wanted to offer a real-time, 3‑dimensional walkthrough that feels close to being on-site.
+- **Innovation:** By combining modern visualization techniques with live data, we could create a dynamic tour that adapts as campus facilities, events, and user preferences change.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. Project History & Evolution
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Prototype Phase (June 2025):**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   - Built a basic 2D map overlay with markers for key buildings using Google Maps JavaScript API.
 
-## Learn More
+2. **3D Integration (June 2025):**
 
-To learn more about Next.js, take a look at the following resources:
+   - Incorporated 3D building models using the Google Maps Platform Elevation and 3D Tiles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Public Launch (July 2025):**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - Deployed on Netlify
 
-## Deploy on Vercel
+## 3. Use of Google Maps Platform
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Maps JavaScript API:** Serves as the core renderer for base maps, custom markers, and event overlays.
+- **3D Tiles & WebGL Overlay View:** Enables seamless embedding of 3D campus models alongside standard map layers.
+- **Places Library:** Powers search and autocomplete for campus points of interest.
+- **Directions API:** Calculates optimal walking routes between tour stops (including stairs and elevators).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# 3dgryphtour
+## 4. Key Learnings
+
+- **Performance Tuning:** Balancing high-fidelity 3D rendering with smooth framerates required:
+
+  - Lazy-loading distant model tiles
+  - Balancig efficient request rates to avoid hitting API quotas
+
+**Repository & Resources:**
+
+- GitHub: `https://github.com/kennyyy5/3dgryphtour/`
+- Live Demo: `https://3d-gryph-tour.netlify.app/`
+
+**Contact & Contribution:**
+For issues or feature requests, please open an issue on GitHub or reach out to the dev team at `kadenuga@uoguelph.ca`.

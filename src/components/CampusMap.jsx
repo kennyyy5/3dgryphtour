@@ -186,28 +186,8 @@ return () => clearInterval(interval);
           </button>
         </div>
 
-        {/* Event List Placeholder */}
-        <h2 className="text-lg font-semibold mb-4">📅 Campus Events</h2>
-        {/* Event List */}
-    {events.length === 0 ? (
-      <p className="text-sm text-gray-500">Loading or no events found...</p>
-    ) : (
-      <ul className="space-y-2">
-        {events.map((event, i) => (
-          <li key={i}>
-            <a
-              href={event.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              {event.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
-
+        {/* Event List Placeholder - removed */}
+        
       </div>
 
       {/* Map */}
